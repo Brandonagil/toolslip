@@ -2,9 +2,23 @@
 
 **Find silent wrong tool calls of LLM agents before they reach real data.**
 
-An agent that picks the wrong tool usually does not crash. The call runs, returns something plausible, and nobody notices. Toolslip measures how often that happens: it shows an agent a tool list, removes the right tool or a needed value, adds look-alike tools, and checks whether the agent calls a wrong tool instead of saying "no suitable tool" or asking the user.
+An agent that picks the wrong tool usually does not crash. The call goes through, the result looks plausible, and no error shows up anywhere. Toolslip measures how often that happens. It shows an agent a tool list, removes the right tool or a needed value, adds look-alike tools, and checks whether the agent calls a wrong tool instead of saying that no tool fits or asking the user.
 
 > Status: research prototype from a master's thesis (Hochschule Karlsruhe, 2026/27). It currently runs on the API-Bank benchmark. Testing your own MCP tool catalog is the next step (see [Roadmap](#roadmap)). Some report labels are still in German.
+
+## Example
+
+A real case from a test run. The user wants a meeting with every Baidu employee who is not traveling today. The agent has already looked up the members, and `TravelStatus` has been removed from its tool list.
+
+```text
+Request   Book a meeting for me, including all employees in the Baidu who are
+          not traveling. Today is 2023.6.8, the meeting is from 14:00 to 15:00.
+History   OrganizationMembers(organization="Baidu") -> ["Jack", "Rose"]
+Expected  NoSuitableTool
+Agent     QueryVacation(user_name="Jack")
+```
+
+`QueryVacation` returns booked vacation days. Someone on vacation is not the same as someone who is traveling, so the attendee list would be built on the wrong data. In a system that has such a tool, the call would succeed and nothing would flag it.
 
 ## What it tests
 
@@ -18,7 +32,7 @@ Each real tool call of an API-Bank dialogue becomes one task: the agent sees the
 
 Look-alike levels: 0, 2 or 5 hand-written look-alikes per real tool (`toolslip/toolchoice_distractors.py`). Each look-alike does something different from what the task needs, so choosing one is always wrong. Every look-alike carries a `why_wrong` note that the report shows.
 
-Outcomes are split into **right**, **visible errors** (e.g. a tool that was not offered, or asking when not needed) and **silent errors** (a real or look-alike tool is called instead of reporting the gap). `toolslip.toolchoice_execute` runs each silent error once against the unchanged API-Bank tools to confirm it executes without an exception.
+Each answer is scored as right, as a visible error or as a silent error. A visible error is easy to catch, for example a call to a tool that was not offered or a question the agent did not need to ask. A silent error is a call to a real or look-alike tool where the agent should have reported the gap. `toolslip.toolchoice_execute` runs each silent error once against the unchanged API-Bank tools to confirm it executes without an exception.
 
 ### First result
 
@@ -29,7 +43,7 @@ One current model, API-Bank level 3, state `tool_missing`, 131 tasks per level:
 | 0 | 7 / 131 (5 %) |
 | 5 | 20 / 131 (15 %) |
 
-Preliminary: one model, one benchmark. Not a model ranking.
+These numbers come from one model on one benchmark. They show the effect of look-alikes and are not a model ranking.
 
 ## Quickstart
 
