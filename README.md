@@ -2,7 +2,7 @@
 
 **Find silent wrong tool calls of LLM agents before they reach real data.**
 
-An agent that picks the wrong tool usually does not crash. The call goes through, the result looks plausible, and no error shows up anywhere. Toolslip measures how often that happens. It shows an agent a tool list, removes the right tool or a needed value, adds look-alike tools, and checks whether the agent calls a wrong tool instead of saying that no tool fits or asking the user.
+An agent that picks the wrong tool does not always crash. Often the call goes through, the result looks plausible, and no error shows up. Toolslip measures how often that happens. It shows an agent a tool list, removes the right tool or a needed value, adds look-alike tools, and checks whether the agent calls a wrong tool instead of saying that no tool fits or asking the user.
 
 > Status: research prototype from a master's thesis (Hochschule Karlsruhe, 2026/27). It currently runs on the API-Bank benchmark. Testing your own MCP tool catalog is the next step (see [Roadmap](#roadmap)). Some report labels are still in German.
 
@@ -32,16 +32,16 @@ Each real tool call of an API-Bank dialogue becomes one task: the agent sees the
 
 Look-alike levels: 0, 2 or 5 hand-written look-alikes per real tool (`toolslip/toolchoice_distractors.py`). Each look-alike does something different from what the task needs, so choosing one is always wrong. Every look-alike carries a `why_wrong` note that the report shows.
 
-Each answer is scored as right, as a visible error or as a silent error. A visible error is easy to catch, for example a call to a tool that was not offered or a question the agent did not need to ask. A silent error is a call to a real or look-alike tool where the agent should have reported the gap. `toolslip.toolchoice_execute` runs each silent error once against the unchanged API-Bank tools to confirm it executes without an exception.
+Each answer is scored as right, as a visible error or as a silent error. A visible error is easy to catch, for example a call to a tool that was not offered or a question the agent did not need to ask. A silent error is a call to a real or look-alike tool where the agent should have reported the gap. `toolslip.toolchoice_execute` runs each silent error once against the unchanged API-Bank tools and records whether the call runs, raises an exception or has no code behind it. In the first run, 64 of 161 silent errors ran without an exception, 61 raised one and 36 were hand-written look-alikes without code.
 
 ### First result
 
-One current model, API-Bank level 3, state `tool_missing`, 131 tasks per level:
+One current model, API-Bank level 3, state `tool_missing`, three passes with 131 tasks each:
 
 | Look-alikes per real tool | Silent wrong tool call |
 |---|---|
-| 0 | 7 / 131 (5 %) |
-| 5 | 20 / 131 (15 %) |
+| 0 | 7 to 8 of 131, 5 to 6 % |
+| 5 | 17 to 20 of 131, 13 to 15 % |
 
 These numbers come from one model on one benchmark. They show the effect of look-alikes and are not a model ranking.
 
