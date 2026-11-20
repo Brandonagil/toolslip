@@ -1,0 +1,131 @@
+{
+  "protocol": "apibank-handoff-20261113-v1",
+  "cases": [
+    {
+      "source_index": 10,
+      "family": "meeting",
+      "partition": "development",
+      "cluster_id": "lv3-10"
+    },
+    {
+      "source_index": 11,
+      "family": "meeting",
+      "partition": "test",
+      "cluster_id": "lv3-11"
+    },
+    {
+      "source_index": 12,
+      "family": "meeting",
+      "partition": "test",
+      "cluster_id": "lv3-12"
+    },
+    {
+      "source_index": 13,
+      "family": "meeting",
+      "partition": "test",
+      "cluster_id": "lv3-13"
+    },
+    {
+      "source_index": 14,
+      "family": "meeting",
+      "partition": "test",
+      "cluster_id": "lv3-14"
+    },
+    {
+      "source_index": 20,
+      "family": "movies",
+      "partition": "development",
+      "cluster_id": "movies-action-comedy-drama"
+    },
+    {
+      "source_index": 21,
+      "family": "movies",
+      "partition": "test",
+      "cluster_id": "movies-comedy-drama-romance"
+    },
+    {
+      "source_index": 22,
+      "family": "movies",
+      "partition": "test",
+      "cluster_id": "lv3-22"
+    },
+    {
+      "source_index": 23,
+      "family": "movies",
+      "partition": "development",
+      "cluster_id": "movies-action-comedy-drama"
+    },
+    {
+      "source_index": 24,
+      "family": "movies",
+      "partition": "test",
+      "cluster_id": "movies-comedy-drama-romance"
+    },
+    {
+      "source_index": 25,
+      "family": "posts",
+      "partition": "development",
+      "cluster_id": "lv3-25"
+    },
+    {
+      "source_index": 26,
+      "family": "posts",
+      "partition": "test",
+      "cluster_id": "lv3-26"
+    },
+    {
+      "source_index": 27,
+      "family": "posts",
+      "partition": "test",
+      "cluster_id": "lv3-27"
+    },
+    {
+      "source_index": 28,
+      "family": "posts",
+      "partition": "test",
+      "cluster_id": "lv3-28"
+    },
+    {
+      "source_index": 29,
+      "family": "posts",
+      "partition": "test",
+      "cluster_id": "lv3-29"
+    },
+    {
+      "source_index": 30,
+      "family": "coordinates_weather",
+      "partition": "development",
+      "cluster_id": "lv3-30"
+    },
+    {
+      "source_index": 31,
+      "family": "coordinates_weather",
+      "partition": "test",
+      "cluster_id": "lv3-31"
+    },
+    {
+      "source_index": 32,
+      "family": "coordinates_weather",
+      "partition": "test",
+      "cluster_id": "lv3-32"
+    },
+    {
+      "source_index": 33,
+      "family": "coordinates_weather",
+      "partition": "test",
+      "cluster_id": "lv3-33"
+    },
+    {
+      "source_index": 34,
+      "family": "coordinates_weather",
+      "partition": "test",
+      "cluster_id": "lv3-34"
+    }
+  ],
+  "controlled_mutations": {
+    "meeting": "Flip the first organization member between Traveling and Working from office; keep every other fact.",
+    "movies": "Replace the first preferred genre with the first absent genre in the fixed order Action, Comedy, Drama, Romance, Thriller; keep watched titles.",
+    "posts": "Replace the first post ID with the smallest ID in 1..15 absent from the original list.",
+    "coordinates_weather": "Use the first different coordinate pair in the original Geocoding lookup order."
+  }
+}

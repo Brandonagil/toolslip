@@ -1,0 +1,28 @@
+[project]
+name = "toolslip"
+version = "0.1.0"
+description = "Find silent wrong tool calls of LLM agents before they reach real data"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+# API-Bank's SearchEngine, needed only for toolslip.toolchoice_execute
+apibank-tools = [
+    "numpy==2.5.4",
+    "nltk==3.10.4",
+    "rank-bm25==0.2.2",
+    "requests==2.34.2",  # imported by API-Bank's GetWeatherForCoordinates
+]
+# Replay stored runs in the Inspect log viewer (toolslip.inspect_replay)
+inspect = [
+    "inspect-ai==0.3.289",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["toolslip"]

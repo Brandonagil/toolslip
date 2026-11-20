@@ -1,0 +1,1484 @@
+{
+  "created_utc": "2026-11-18T21:09:22+00:00",
+  "model": "gpt-6-luna",
+  "reasoning": "low",
+  "instructions": "You edit user requests for a test set. Rewrite the request so that the given value is no longer stated and cannot be inferred from the text. Keep every other detail and keep the wording as close to the original as possible. Do not mention that information is missing, do not add a question, do not add placeholders like [name]. Return JSON: {\"request\": \"<rewritten request>\"}",
+  "hand_checked": false,
+  "rewrites": [
+    {
+      "task_id": "ep0-k0",
+      "key": "user_name",
+      "value": "John",
+      "original": "Query meeting of John and send email reminder to john@example.com.",
+      "requirement": "Query meeting and send email reminder to john@example.com.",
+      "ok": false,
+      "usage": {
+        "input_tokens": 142,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 22,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 164,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep0-k1",
+      "key": "recipient",
+      "value": "john@example.com",
+      "original": "Query meeting of John and send email reminder to john@example.com.",
+      "requirement": "Query meeting of John and send email reminder to John.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 143,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 107,
+        "output_tokens_details": {
+          "reasoning_tokens": 83
+        },
+        "total_tokens": 250,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep1-k0",
+      "key": "user_name",
+      "value": "Mary",
+      "original": "Query meeting of Mary and send email reminder to mary@example.com",
+      "requirement": "Query meeting and send email reminder",
+      "ok": true,
+      "usage": {
+        "input_tokens": 142,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 124,
+        "output_tokens_details": {
+          "reasoning_tokens": 105
+        },
+        "total_tokens": 266,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep1-k1",
+      "key": "recipient",
+      "value": "mary@example.com",
+      "original": "Query meeting of Mary and send email reminder to mary@example.com",
+      "requirement": "Query meeting of Mary and send an email reminder",
+      "ok": true,
+      "usage": {
+        "input_tokens": 143,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 97,
+        "output_tokens_details": {
+          "reasoning_tokens": 75
+        },
+        "total_tokens": 240,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep2-k0",
+      "key": "user_name",
+      "value": "Peter",
+      "original": "Query meeting of Peter and send email reminder to peter@example.com",
+      "requirement": "Query meeting and send email reminder",
+      "ok": true,
+      "usage": {
+        "input_tokens": 142,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 100,
+        "output_tokens_details": {
+          "reasoning_tokens": 81
+        },
+        "total_tokens": 242,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep2-k1",
+      "key": "recipient",
+      "value": "peter@example.com",
+      "original": "Query meeting of Peter and send email reminder to peter@example.com",
+      "requirement": "Query meeting of Peter and send email reminder",
+      "ok": true,
+      "usage": {
+        "input_tokens": 144,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 19,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 163,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep3-k0",
+      "key": "user_name",
+      "value": "Tom",
+      "original": "Query meeting of Tom and send email reminder to tom@example.com",
+      "requirement": "Query meeting and send email reminder",
+      "ok": true,
+      "usage": {
+        "input_tokens": 142,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 126,
+        "output_tokens_details": {
+          "reasoning_tokens": 107
+        },
+        "total_tokens": 268,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep3-k1",
+      "key": "recipient",
+      "value": "tom@example.com",
+      "original": "Query meeting of Tom and send email reminder to tom@example.com",
+      "requirement": "Query meeting of Tom and send email reminder",
+      "ok": true,
+      "usage": {
+        "input_tokens": 143,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 95,
+        "output_tokens_details": {
+          "reasoning_tokens": 74
+        },
+        "total_tokens": 238,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep4-k0",
+      "key": "user_name",
+      "value": "Jerry",
+      "original": "Query meeting of Jerry and send email reminder to jerry@example.com",
+      "requirement": "Query the meeting and send an email reminder",
+      "ok": true,
+      "usage": {
+        "input_tokens": 143,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 132,
+        "output_tokens_details": {
+          "reasoning_tokens": 111
+        },
+        "total_tokens": 275,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep4-k1",
+      "key": "recipient",
+      "value": "jerry@example.com",
+      "original": "Query meeting of Jerry and send email reminder to jerry@example.com",
+      "requirement": "Query meeting of Jerry and send email reminder",
+      "ok": true,
+      "usage": {
+        "input_tokens": 145,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 51,
+        "output_tokens_details": {
+          "reasoning_tokens": 30
+        },
+        "total_tokens": 196,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep5-k0",
+      "key": "latitude",
+      "value": "40.7128",
+      "original": "Get the current weather forecast for a specific location (latitude=40.7128, longitude=74.006) and provide clothing recommendations based on the weather conditions.",
+      "requirement": "Get the current weather forecast for a specific location (longitude=74.006) and provide clothing recommendations based on the weather conditions.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 164,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 115,
+        "output_tokens_details": {
+          "reasoning_tokens": 76
+        },
+        "total_tokens": 279,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep6-k0",
+      "key": "latitude",
+      "value": "37.7749",
+      "original": "Get the current weather forecast for a specific location (latitude=37.7749, longitude=122.4194) and provide clothing recommendations based on the weather conditions.",
+      "requirement": "Get the current weather forecast for a specific location (longitude=122.4194) and provide clothing recommendations based on the weather conditions.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 165,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 112,
+        "output_tokens_details": {
+          "reasoning_tokens": 72
+        },
+        "total_tokens": 277,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep7-k0",
+      "key": "latitude",
+      "value": "51.5074",
+      "original": "Get the current weather forecast for a specific location (latitude=51.5074, longitude=0.1278) and provide clothing recommendations based on the weather conditions.",
+      "requirement": "Get the current weather forecast for a specific location (longitude=0.1278) and provide clothing recommendations based on the weather conditions.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 165,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 134,
+        "output_tokens_details": {
+          "reasoning_tokens": 94
+        },
+        "total_tokens": 299,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep8-k0",
+      "key": "latitude",
+      "value": "48.8566",
+      "original": "Get the current weather forecast for a specific location (latitude=48.8566, longitude=2.3522) and provide clothing recommendations based on the weather conditions.",
+      "requirement": "Get the current weather forecast for a specific location and provide clothing recommendations based on the weather conditions.",
+      "ok": false,
+      "usage": {
+        "input_tokens": 165,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 110,
+        "output_tokens_details": {
+          "reasoning_tokens": 78
+        },
+        "total_tokens": 275,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep9-k0",
+      "key": "latitude",
+      "value": "35.6762",
+      "original": "Get the current weather forecast for a specific location (latitude=35.6762, longitude=139.6503) and provide clothing recommendations based on the weather conditions.",
+      "requirement": "Get the current weather forecast for a specific location (longitude=139.6503) and provide clothing recommendations based on the weather conditions.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 165,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 115,
+        "output_tokens_details": {
+          "reasoning_tokens": 75
+        },
+        "total_tokens": 280,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep10-k0",
+      "key": "organization",
+      "value": "Alibaba",
+      "original": "Book a meeting for me, including all employees in the Alibaba who are not traveling. Today is 2023.6.8, the meeting is from 14:00 to 15:00.",
+      "requirement": "Book a meeting for me, including all employees who are not traveling. Today is 2023.6.8, the meeting is from 14:00 to 15:00.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 169,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 118,
+        "output_tokens_details": {
+          "reasoning_tokens": 67
+        },
+        "total_tokens": 287,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep11-k0",
+      "key": "organization",
+      "value": "Tencent",
+      "original": "Book a meeting for me, including all employees in the Tencent who are not traveling. Today is 2023.6.8, the meeting is from 14:00 to 15:00.",
+      "requirement": "Book a meeting for me, including all employees who are not traveling. Today is 2023.6.8, the meeting is from 14:00 to 15:00.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 169,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 100,
+        "output_tokens_details": {
+          "reasoning_tokens": 49
+        },
+        "total_tokens": 269,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep12-k0",
+      "key": "organization",
+      "value": "Baidu",
+      "original": "Book a meeting for me, including all employees in the Baidu who are not traveling. Today is 2023.6.8, the meeting is from 14:00 to 15:00.",
+      "requirement": "Book a meeting for me, including all employees who are not traveling. Today is 2023.6.8, the meeting is from 14:00 to 15:00.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 171,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 85,
+        "output_tokens_details": {
+          "reasoning_tokens": 34
+        },
+        "total_tokens": 256,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep13-k0",
+      "key": "organization",
+      "value": "ByteDance",
+      "original": "Book a meeting for me, including all employees in the ByteDance who are not traveling. Today is 2023.6.8, the meeting is from 14:00 to 15:00.",
+      "requirement": "Book a meeting for me, including all employees who are not traveling. Today is 2023.6.8, the meeting is from 14:00 to 15:00.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 171,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 83,
+        "output_tokens_details": {
+          "reasoning_tokens": 32
+        },
+        "total_tokens": 254,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep14-k0",
+      "key": "organization",
+      "value": "JD",
+      "original": "Book a meeting for me, including all employees in the JD who are not traveling. Today is 2023.6.8, the meeting is from 14:00 to 15:00.",
+      "requirement": "Book a meeting for me, including all employees who are not traveling. Today is 2023.6.8, the meeting is from 14:00 to 15:00.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 169,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 87,
+        "output_tokens_details": {
+          "reasoning_tokens": 36
+        },
+        "total_tokens": 256,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep15-k0",
+      "key": "address",
+      "value": "New York City",
+      "original": "Find nearby restaurants within 1km of New York City.",
+      "requirement": "Find nearby restaurants within 1km.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 142,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 59,
+        "output_tokens_details": {
+          "reasoning_tokens": 38
+        },
+        "total_tokens": 201,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep16-k0",
+      "key": "address",
+      "value": "San Francisco",
+      "original": "Find nearby restaurants within 1km of San Francisco.",
+      "requirement": "Find nearby restaurants within 1km.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 140,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 19,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 159,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep17-k0",
+      "key": "address",
+      "value": "London",
+      "original": "Find nearby restaurants within 1km of London.",
+      "requirement": "Find nearby restaurants within 1km.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 138,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 60,
+        "output_tokens_details": {
+          "reasoning_tokens": 39
+        },
+        "total_tokens": 198,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep18-k0",
+      "key": "address",
+      "value": "Paris",
+      "original": "Find nearby restaurants within 1km of Paris.",
+      "requirement": "Find nearby restaurants within 1km.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 138,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 50,
+        "output_tokens_details": {
+          "reasoning_tokens": 29
+        },
+        "total_tokens": 188,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep19-k0",
+      "key": "address",
+      "value": "Tokyo",
+      "original": "Find nearby restaurants within 1km of Tokyo.",
+      "requirement": "Find nearby restaurants within 1km.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 138,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 61,
+        "output_tokens_details": {
+          "reasoning_tokens": 40
+        },
+        "total_tokens": 199,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep20-k0",
+      "key": "user_name",
+      "value": "John",
+      "original": "Retrieve a list of recommended movies based on John's preferences and filter out the movies that the user has already watched.",
+      "requirement": "Retrieve a list of recommended movies based on the user's preferences and filter out the movies that the user has already watched.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 151,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 86,
+        "output_tokens_details": {
+          "reasoning_tokens": 50
+        },
+        "total_tokens": 237,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep21-k0",
+      "key": "user_name",
+      "value": "Mary",
+      "original": "Retrieve a list of recommended movies based on Mary's preferences and filter out the movies that the user has already watched.",
+      "requirement": "Retrieve a list of recommended movies based on the user's preferences and filter out the movies that the user has already watched.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 151,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 79,
+        "output_tokens_details": {
+          "reasoning_tokens": 43
+        },
+        "total_tokens": 230,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep22-k0",
+      "key": "user_name",
+      "value": "Peter",
+      "original": "Retrieve a list of recommended movies based on Peter's preferences and filter out the movies that the user has already watched.",
+      "requirement": "Retrieve a list of recommended movies based on the user's preferences and filter out the movies that the user has already watched.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 152,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 77,
+        "output_tokens_details": {
+          "reasoning_tokens": 41
+        },
+        "total_tokens": 229,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep23-k0",
+      "key": "user_name",
+      "value": "Tom",
+      "original": "Retrieve a list of recommended movies based on Tom's preferences and filter out the movies that the user has already watched.",
+      "requirement": "Retrieve a list of recommended movies based on the user's preferences and filter out the movies that the user has already watched.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 152,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 92,
+        "output_tokens_details": {
+          "reasoning_tokens": 56
+        },
+        "total_tokens": 244,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep24-k0",
+      "key": "user_name",
+      "value": "Jerry",
+      "original": "Retrieve a list of recommended movies based on Jerry's preferences and filter out the movies that the user has already watched.",
+      "requirement": "Retrieve a list of recommended movies based on preferences and filter out the movies that the user has already watched.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 152,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 84,
+        "output_tokens_details": {
+          "reasoning_tokens": 50
+        },
+        "total_tokens": 236,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep25-k0",
+      "key": "user_id",
+      "value": 2,
+      "original": "Retrieve the total number of likes for a specific user ID 2 on a social media platform.",
+      "requirement": "Retrieve the total number of likes for a specific user on a social media platform.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 148,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 64,
+        "output_tokens_details": {
+          "reasoning_tokens": 35
+        },
+        "total_tokens": 212,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep26-k0",
+      "key": "user_id",
+      "value": 1,
+      "original": "Retrieve the total number of likes for a specific user ID 1 on a social media platform.",
+      "requirement": "Retrieve the total number of likes for a user on a social media platform.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 148,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 81,
+        "output_tokens_details": {
+          "reasoning_tokens": 53
+        },
+        "total_tokens": 229,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep27-k0",
+      "key": "user_id",
+      "value": 3,
+      "original": "Retrieve the total number of likes for a specific user ID 3 on a social media platform.",
+      "requirement": "Retrieve the total number of likes for a specific user on a social media platform.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 148,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 67,
+        "output_tokens_details": {
+          "reasoning_tokens": 38
+        },
+        "total_tokens": 215,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep28-k0",
+      "key": "user_id",
+      "value": 4,
+      "original": "Retrieve the total number of likes for a specific user ID 4 on a social media platform.",
+      "requirement": "Retrieve the total number of likes for a user on a social media platform.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 148,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 78,
+        "output_tokens_details": {
+          "reasoning_tokens": 50
+        },
+        "total_tokens": 226,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep29-k0",
+      "key": "user_id",
+      "value": 5,
+      "original": "Retrieve the total number of likes for a specific user ID 5 on a social media platform.",
+      "requirement": "Retrieve the total number of likes for a specific user on a social media platform.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 148,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 27,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 175,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep30-k0",
+      "key": "address",
+      "value": "New York City",
+      "original": "Check the current weather conditions in New York City.",
+      "requirement": "Check the current weather conditions.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 140,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 48,
+        "output_tokens_details": {
+          "reasoning_tokens": 29
+        },
+        "total_tokens": 188,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep31-k0",
+      "key": "address",
+      "value": "San Francisco",
+      "original": "Check the current weather conditions in San Francisco.",
+      "requirement": "Check the current weather conditions.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 138,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 45,
+        "output_tokens_details": {
+          "reasoning_tokens": 26
+        },
+        "total_tokens": 183,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep32-k0",
+      "key": "address",
+      "value": "London",
+      "original": "Check the current weather conditions in London.",
+      "requirement": "Check the current weather conditions.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 136,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 47,
+        "output_tokens_details": {
+          "reasoning_tokens": 28
+        },
+        "total_tokens": 183,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep33-k0",
+      "key": "address",
+      "value": "Paris",
+      "original": "Check the current weather conditions in Paris.",
+      "requirement": "Check the current weather conditions.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 136,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 53,
+        "output_tokens_details": {
+          "reasoning_tokens": 34
+        },
+        "total_tokens": 189,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep34-k0",
+      "key": "address",
+      "value": "Tokyo",
+      "original": "Check the current weather conditions in Tokyo.",
+      "requirement": "Check the current weather conditions.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 136,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 44,
+        "output_tokens_details": {
+          "reasoning_tokens": 25
+        },
+        "total_tokens": 180,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep36-k0",
+      "key": "source",
+      "value": "Los Angeles",
+      "original": "Retrieve flight options and hotel availability for Los Angeles to San Francisco January 2nd, 2022.",
+      "requirement": "Retrieve flight options and hotel availability for San Francisco January 2nd, 2022.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 150,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 77,
+        "output_tokens_details": {
+          "reasoning_tokens": 46
+        },
+        "total_tokens": 227,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep37-k0",
+      "key": "source",
+      "value": "London",
+      "original": "Retrieve flight options and hotel availability for London to San Francisco on January 3rd, 2022.",
+      "requirement": "Retrieve flight options and hotel availability for San Francisco on January 3rd, 2022.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 149,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 76,
+        "output_tokens_details": {
+          "reasoning_tokens": 44
+        },
+        "total_tokens": 225,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep38-k0",
+      "key": "source",
+      "value": "New York",
+      "original": "Retrieve flight options and hotel availability for New York to London on January 4th, 2022.",
+      "requirement": "Retrieve flight options and hotel availability for London on January 4th, 2022.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 150,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 95,
+        "output_tokens_details": {
+          "reasoning_tokens": 64
+        },
+        "total_tokens": 245,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep39-k0",
+      "key": "source",
+      "value": "New York",
+      "original": "Retrieve flight options and hotel availability for New York to Los Angeles on January 5th, 2022.",
+      "requirement": "Retrieve flight options and hotel availability for the specified route to Los Angeles on January 5th, 2022.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 151,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 34,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 185,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep40-k0",
+      "key": "occupation",
+      "value": "Financial Analyst",
+      "original": "Calculate the monthly salary after taxes for a Financial Analyst",
+      "requirement": "Calculate the monthly salary after taxes",
+      "ok": true,
+      "usage": {
+        "input_tokens": 140,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 47,
+        "output_tokens_details": {
+          "reasoning_tokens": 28
+        },
+        "total_tokens": 187,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep41-k0",
+      "key": "occupation",
+      "value": "Software Engineer",
+      "original": "Calculate the monthly salary after taxes for a Software Engineer",
+      "requirement": "Calculate the monthly salary after taxes",
+      "ok": true,
+      "usage": {
+        "input_tokens": 140,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 17,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 157,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep42-k0",
+      "key": "occupation",
+      "value": "Data Scientist",
+      "original": "Calculate the monthly salary after taxes for a Data Scientist",
+      "requirement": "Calculate the monthly salary after taxes.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 140,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 18,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 158,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep43-k0",
+      "key": "occupation",
+      "value": "Product Manager",
+      "original": "Calculate the monthly salary after taxes for a Product Manager",
+      "requirement": "Calculate the monthly salary after taxes",
+      "ok": true,
+      "usage": {
+        "input_tokens": 140,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 48,
+        "output_tokens_details": {
+          "reasoning_tokens": 29
+        },
+        "total_tokens": 188,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep44-k0",
+      "key": "occupation",
+      "value": "Doctor",
+      "original": "Calculate the monthly salary after taxes for a Doctor",
+      "requirement": "Calculate the monthly salary after taxes.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 138,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 18,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 156,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep45-k0",
+      "key": "username",
+      "value": "John",
+      "original": "Update John's personal information and address. Password is 123456. Address is 123 Main St.",
+      "requirement": "Update personal information and address. Password is 123456. Address is 123 Main St.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 148,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 67,
+        "output_tokens_details": {
+          "reasoning_tokens": 35
+        },
+        "total_tokens": 215,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep45-k1",
+      "key": "address",
+      "value": "123 Main St",
+      "original": "Update John's personal information and address. Password is 123456. Address is 123 Main St.",
+      "requirement": "Update John's personal information and address. Password is 123456.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 150,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 77,
+        "output_tokens_details": {
+          "reasoning_tokens": 51
+        },
+        "total_tokens": 227,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep46-k0",
+      "key": "username",
+      "value": "Mary",
+      "original": "Update Mary's personal information and address. Password is abcdef. Address is 456 Main St.",
+      "requirement": "Update the personal information and address. Password is abcdef. Address is 456 Main St.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 147,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 83,
+        "output_tokens_details": {
+          "reasoning_tokens": 51
+        },
+        "total_tokens": 230,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep46-k1",
+      "key": "address",
+      "value": "456 Main St",
+      "original": "Update Mary's personal information and address. Password is abcdef. Address is 456 Main St.",
+      "requirement": "Update Mary's personal information and address. Password is abcdef.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 149,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 23,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 172,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep47-k0",
+      "key": "username",
+      "value": "Peter",
+      "original": "Update Peter's personal information and address. Password is qwerty. Address is 789 Main St.",
+      "requirement": "Update the personal information and address. Password is qwerty. Address is 789 Main St.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 149,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 31,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 180,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep47-k1",
+      "key": "address",
+      "value": "789 Main St",
+      "original": "Update Peter's personal information and address. Password is qwerty. Address is 789 Main St.",
+      "requirement": "Update Peter's personal information. Password is qwerty.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 151,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 59,
+        "output_tokens_details": {
+          "reasoning_tokens": 34
+        },
+        "total_tokens": 210,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep48-k0",
+      "key": "username",
+      "value": "Tom",
+      "original": "Update Tom's personal information and address. Password is asdfgh. Address is 012 Main St.",
+      "requirement": "Update the personal information and address for the person. Password is asdfgh. Address is 012 Main St.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 149,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 34,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 183,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep48-k1",
+      "key": "address",
+      "value": "012 Main St",
+      "original": "Update Tom's personal information and address. Password is asdfgh. Address is 012 Main St.",
+      "requirement": "Update Tom's personal information and address. Password is asdfgh.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 151,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 76,
+        "output_tokens_details": {
+          "reasoning_tokens": 49
+        },
+        "total_tokens": 227,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep49-k0",
+      "key": "username",
+      "value": "Jerry",
+      "original": "Update Jerry's personal information and address. Password is zxcvbn. Address is 345 Main St.",
+      "requirement": "Update personal information and address. Password is zxcvbn. Address is 345 Main St.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 150,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 73,
+        "output_tokens_details": {
+          "reasoning_tokens": 40
+        },
+        "total_tokens": 223,
+        "status": "completed"
+      }
+    },
+    {
+      "task_id": "ep49-k1",
+      "key": "address",
+      "value": "345 Main St",
+      "original": "Update Jerry's personal information and address. Password is zxcvbn. Address is 345 Main St.",
+      "requirement": "Update Jerry's personal information and address. Password is zxcvbn.",
+      "ok": true,
+      "usage": {
+        "input_tokens": 152,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 64,
+        "output_tokens_details": {
+          "reasoning_tokens": 36
+        },
+        "total_tokens": 216,
+        "status": "completed"
+      }
+    }
+  ]
+}

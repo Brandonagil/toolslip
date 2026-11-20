@@ -1,0 +1,10 @@
+Toolslip
+Copyright 2026 Brandon Agil
+
+This product includes data and unmodified source files from API-Bank
+(https://github.com/AlibabaResearch/DAMO-ConvAI/tree/faf754671f5b850e1b4d1ff870db37a6a2480df6/api-bank,
+https://huggingface.co/datasets/liminghao1630/API-Bank, revision 12e8158b7628c168f07e8f31fbbe3445e99f44cf),
+licensed under the Apache License 2.0. The original license is kept in data/*/upstream/LICENSE.
+
+It also includes the English Punkt sentence tokenizer model from NLTK Data
+(data/apibank-tools-20261119/nltk_data), licensed under the Apache License 2.0.

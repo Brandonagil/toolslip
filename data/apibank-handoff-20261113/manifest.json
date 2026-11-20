@@ -1,0 +1,25 @@
+{
+  "github_commit": "faf754671f5b850e1b4d1ff870db37a6a2480df6",
+  "github_url": "https://github.com/AlibabaResearch/DAMO-ConvAI/tree/faf754671f5b850e1b4d1ff870db37a6a2480df6/api-bank",
+  "hf_revision": "12e8158b7628c168f07e8f31fbbe3445e99f44cf",
+  "hf_url": "https://huggingface.co/datasets/liminghao1630/API-Bank/blob/12e8158b7628c168f07e8f31fbbe3445e99f44cf/test-data/level-3.json",
+  "hf_git_blob": "52f9a648cb5da0d72c2e3abc3707ef54fbe7a461",
+  "license": "Apache-2.0 (api-bank/LICENSE)",
+  "source_files_unchanged": true,
+  "files": {
+    "case_plan.json": "c45dbedf0d1ee9bacd11aeb8549626dae1812e3916912dc8e8aa8173de9ecb91",
+    "hf/level-3.json": "29542493a302915303d5d67f868282ddda46fa15ba059a4bcf38c6687be29d55",
+    "upstream/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "upstream/apis/api.py": "7e06f974c433e207bc012db4b46aac5de0baff1e959fa0004274b2036e5b58fd",
+    "upstream/lv3_apis/add_meeting.py": "14012a556487ccb395f8d71c5dd2a55eb3597762553aa9963889c403cb918c2d",
+    "upstream/lv3_apis/geocoding.py": "78e10c22843db9c3fc0409447a0a4528d813ece5afd0fb2a2811a2eaa73b7086",
+    "upstream/lv3_apis/get_weather.py": "d9fc4707e477d617e1b9ddbad791aa1c98f3f1ac858b6dcd1b932e3d644a2800",
+    "upstream/lv3_apis/like_count.py": "5b81861d60642f879eac69226bbd1edbd4c44a04c231dc13d5562060fb3c5351",
+    "upstream/lv3_apis/movie_recommandation.py": "19cb350f6750a410a5d924a024b07c4c5b822e2e728e1ae4c1298d51dbdc958d",
+    "upstream/lv3_apis/organization_members.py": "2a386c6a9ebe2ff34082ef8bb67e27d243a5c501a2bb79543e6a29ba4d6057fb",
+    "upstream/lv3_apis/travel_status.py": "3001c3ab08d1f53e4ee2582a4da64696dd838f6400ffa0032985d06151993ae2",
+    "upstream/lv3_apis/user_posts.py": "66cc0254957029887e6d3891d48aa8c9bf6a2b24eb087c5b244e7939b5796238",
+    "upstream/lv3_apis/user_watched_movies.py": "3847c9ceb4238762922aedfb9cdfa34bdda506c0ea285596afbedffedb7bf4f1",
+    "upstream/lv3_apis/users_movie_preference.py": "e15ad33013be5fddc11e765876ac7996755ea71ab4e8029927def23ce021c1c4"
+  }
+}
